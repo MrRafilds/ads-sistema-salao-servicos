@@ -4,16 +4,12 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- * ConnectionFactory
- * Gerencia a conexão JDBC com o banco MySQL.
- */
 public class ConnectionFactory {
 
-    private static final String URL     = "jdbc:mysql://localhost:3306/trabalhoPoo"
-                                        + "?useSSL=false&serverTimezone=America/Sao_Paulo";
-    private static final String USUARIO = "root";
-    private static final String SENHA   = "";   // ← altere se tiver senha no MySQL
+    private static final String URL     = "jdbc:mysql://localhost:3306/aulapoo"
+                                        + "?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=America/Sao_Paulo";
+    private static final String USUARIO = "fatec";
+    private static final String SENHA   = "fatec2021";   
 
     public static Connection getConnection() {
         try {

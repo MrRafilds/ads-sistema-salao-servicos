@@ -9,10 +9,6 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * DAO - ServicoDAO
- * CRUD completo para Serviços Prestados, com JOIN para trazer dados de Cliente e TipoServico.
- */
 public class ServicoDAO {
 
     public void inserir(Servico s) throws SQLException {

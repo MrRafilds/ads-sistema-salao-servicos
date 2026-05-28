@@ -7,10 +7,6 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * DAO - TipoServicoDAO
- * CRUD completo para a entidade TipoServico.
- */
 public class TipoServicoDAO {
 
     public void inserir(TipoServico ts) throws SQLException {

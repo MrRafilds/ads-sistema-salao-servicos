@@ -36,7 +36,7 @@ public class TelaServico extends JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
-        // ── Formulário ────────────────────────────────────────────────────────
+        // ── Formulário 
         JPanel pForm = new JPanel(new GridBagLayout());
         pForm.setBorder(BorderFactory.createTitledBorder("Dados do Serviço Prestado"));
         GridBagConstraints g = new GridBagConstraints();
@@ -81,7 +81,7 @@ public class TelaServico extends JFrame {
         txtDetalhe = new JTextField(30);
         pForm.add(txtDetalhe, g);
 
-        // ── Botões ────────────────────────────────────────────────────────────
+        // ── Botões 
         JPanel pBotoes = new JPanel(new FlowLayout(FlowLayout.CENTER, 6, 4));
         JButton btnNovo    = new JButton("Novo");
         JButton btnSalvar  = new JButton("Salvar");
@@ -91,7 +91,7 @@ public class TelaServico extends JFrame {
         pBotoes.add(btnNovo); pBotoes.add(btnSalvar); pBotoes.add(btnAlterar);
         pBotoes.add(btnExcluir); pBotoes.add(btnLimpar);
 
-        // ── Busca ─────────────────────────────────────────────────────────────
+        // ── Busca 
         JPanel pBusca = new JPanel(new FlowLayout(FlowLayout.LEFT, 6, 4));
         txtBusca = new JTextField(20);
         JButton btnBuscar = new JButton("Buscar");
@@ -99,7 +99,7 @@ public class TelaServico extends JFrame {
         pBusca.add(txtBusca);
         pBusca.add(btnBuscar);
 
-        // ── Tabela ────────────────────────────────────────────────────────────
+        // ── Tabela 
         modelo = new DefaultTableModel(
             new String[]{"ID", "Cliente", "Tipo de Serviço", "Detalhe", "Valor (R$)", "Data"}, 0) {
             public boolean isCellEditable(int r, int c) { return false; }
@@ -111,7 +111,7 @@ public class TelaServico extends JFrame {
         tabela.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         JScrollPane scroll = new JScrollPane(tabela);
 
-        // ── Layout ────────────────────────────────────────────────────────────
+        // ── Layout 
         JPanel topo = new JPanel(new BorderLayout());
         topo.add(pForm,   BorderLayout.CENTER);
         topo.add(pBotoes, BorderLayout.SOUTH);
@@ -122,7 +122,7 @@ public class TelaServico extends JFrame {
         add(scroll, BorderLayout.SOUTH);
         scroll.setPreferredSize(new Dimension(0, 200));
 
-        // ── Eventos ───────────────────────────────────────────────────────────
+        // ── Eventos 
         // Ao selecionar tipo, preenche o valor automaticamente
         cbTipoServico.addActionListener(e -> preencherValor());
 
@@ -142,7 +142,6 @@ public class TelaServico extends JFrame {
         carregarTabela();
     }
 
-    // ── Preenche valor automaticamente com o preço do tipo selecionado ────────
     private void preencherValor() {
         TipoServico ts = (TipoServico) cbTipoServico.getSelectedItem();
         if (ts != null) txtValor.setText(String.format("%.2f", ts.getPreco()));

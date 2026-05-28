@@ -1,8 +1,5 @@
 package model;
 
-/**
- * Model - TipoServico
- */
 public class TipoServico {
 
     private int    idTipoServico;

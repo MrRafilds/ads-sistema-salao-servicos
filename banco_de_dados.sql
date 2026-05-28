@@ -1,5 +1,5 @@
-create database if not exists trabalhoPoo;
-use trabalhoPoo;
+create database if not exists aulapoo;
+use aulapoo;
 
 create table if not exists tipoServico(
     idTipoServico integer primary key auto_increment,

@@ -1,8 +1,5 @@
 package model;
 
-/**
- * Model - Cliente
- */
 public class Cliente {
 
     private int    idCliente;

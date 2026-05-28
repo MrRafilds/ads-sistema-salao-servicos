@@ -2,9 +2,6 @@ package model;
 
 import java.util.Date;
 
-/**
- * Model - Servico (Serviço Prestado)
- */
 public class Servico {
 
     private int         idServico;
